@@ -1,0 +1,2 @@
+Clases
+Definen una forma de organizar datos repetibles, deben usarse para evitar repetir lineas de codigo que hacen referencia a la misma informacion.
