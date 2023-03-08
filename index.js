@@ -8,6 +8,11 @@ class CuentaCorriente{
     numero;
     saldo;
     agencia;
+
+    //metodo
+    depositoEnCuenta(valor){
+        cuentaCorriente2.saldo += valor
+    }
 }
 
 const cliente1 = new Cliente();
@@ -31,10 +36,13 @@ cliente2.rutCliente = "32555"
 const cuentaCorriente2 = new CuentaCorriente();
 
 cuentaCorriente2.numero ="5125698"
-cuentaCorriente2.saldo = 512000023
+cuentaCorriente2.saldo = 1000
 cuentaCorriente2.agencia ="Colegio"
 
 console.log(cliente1);
 console.log(cuentaCorriente1);
 console.log(cliente2);
 console.log(cuentaCorriente2);
+console.log(cuentaCorriente2.saldo);
+cuentaCorriente2.depositoEnCuenta(500)
+console.log(cuentaCorriente2.saldo);
