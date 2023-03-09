@@ -48,3 +48,20 @@ dentro de clase
     cuentaDeRaul.retirarDeCuenta(50)
     console.log(cuentaDeRaul);
     RTA: CuentaCorriente { numero: 0, saldo: 50, agencia: '' }
+
+ATRIBUTO PRIVADO
+    Se usa con # justo antes del nombre del atributo, informando de que se trata de un atributo privado al que no se debe acceder directamente desde fuera de la clase.
+
+class Persona {
+  #nombre = 'Edu';
+
+  renombrar(nombre) {
+    this.#nombre = nombre;
+  }
+}
+Si ahora intentamos acceder directamente a un atributo definido como privado obtendremos un error, estando forzados a usar los métodos que proporcione la clase. Esto mejora la encapsulación de las clases, evitando que podamos modificar atributos privados desde fuera de la clase accidentalmente.
+
+Los atributos solamente se podrás definir como privados cuando declares la clase y no en tiempo de ejecución.
+
+Debes tener en cuenta de que esta sintaxis todavía se encuentra en fase experimental, por lo que todavía no se recomienda su uso.
+https://www.neoguias.com/atributos-privados-clases-javascript/
