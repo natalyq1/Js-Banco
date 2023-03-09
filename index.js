@@ -1,3 +1,5 @@
+
+//definición de clases
 class Cliente{
     nombreCliente;
     dniCliente;
@@ -11,38 +13,25 @@ class CuentaCorriente{
 
     //metodo
     depositoEnCuenta(valor){
-        cuentaCorriente2.saldo += valor
+        //el this se usa para referirnos a esta cuenta, en la que se este actualmente
+        this.saldo += valor
+    }
+
+    retirarDeCuenta(valor){
+        this.saldo -= valor
     }
 }
 
-const cliente1 = new Cliente();
+cuentaDeRaul = new CuentaCorriente()
+//el programa no sabe que tipo de dato es, debemos asignarle uno
+cuentaDeRaul.saldo = 0
 
-cliente1.nombreCliente ="Jose"
-cliente1.dniCliente = "13232"
-cliente1.rutCliente = "13232"
+cuentaDeRaul.depositoEnCuenta(100)
+console.log(cuentaDeRaul);
+cuentaDeRaul.retirarDeCuenta(50)
+console.log(cuentaDeRaul);
 
-const cuentaCorriente1 = new CuentaCorriente();
-
-cuentaCorriente1.numero ="5121215"
-cuentaCorriente1.saldo = 1200000
-cuentaCorriente1.agencia ="Independiente"
-
-const cliente2 = new Cliente();
-
-cliente2.nombreCliente ="Marco"
-cliente2.dniCliente = "32555"
-cliente2.rutCliente = "32555"
-
-const cuentaCorriente2 = new CuentaCorriente();
-
-cuentaCorriente2.numero ="5125698"
-cuentaCorriente2.saldo = 1000
-cuentaCorriente2.agencia ="Colegio"
-
-console.log(cliente1);
-console.log(cuentaCorriente1);
-console.log(cliente2);
-console.log(cuentaCorriente2);
-console.log(cuentaCorriente2.saldo);
-cuentaCorriente2.depositoEnCuenta(500)
-console.log(cuentaCorriente2.saldo);
+/*
+CuentaCorriente { numero: undefined, saldo: 100, agencia: undefined }
+CuentaCorriente { numero: undefined, saldo: 50, agencia: undefined }
+*/
