@@ -8,13 +8,13 @@ class Cliente{
 
 class CuentaCorriente{
     numero;
-    saldo;
+    #saldo;
     agencia;
 
     //el programa no sabe que tipo de dato es, debemos asignarle uno
     //constructor y en este caso atributo privado
     constructor(){
-        this.saldo = 0
+        this.#saldo = 0
         this.agencia = ''
         this.numero = ''
     }
@@ -24,13 +24,13 @@ class CuentaCorriente{
     depositoEnCuenta(valor){
         //el this se usa para referirnos a esta cuenta, en la que se este actualmente
         if (valor > 0) {
-           this.saldo += valor 
+           this.#saldo += valor 
         } 
     }
 
     retirarDeCuenta(valor){
-        if (valor <= this.saldo) {
-            this.saldo -= valor
+        if (valor <= this.#saldo) {
+            this.#saldo -= valor
         }
     }
 }
@@ -46,6 +46,7 @@ cuentaDeRaul.depositoEnCuenta(-20)
 console.log(cuentaDeRaul);
 
 /*
-CuentaCorriente { numero: undefined, saldo: 100, agencia: undefined }
-CuentaCorriente { numero: undefined, saldo: 50, agencia: undefined }
+CuentaCorriente { numero: '', agencia: '' }
+CuentaCorriente { numero: '', agencia: '' }
+CuentaCorriente { numero: '', agencia: '' }
 */
