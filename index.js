@@ -11,6 +11,14 @@ class CuentaCorriente{
     saldo;
     agencia;
 
+    //el programa no sabe que tipo de dato es, debemos asignarle uno
+    constructor(){
+        this.saldo = 0
+        this.agencia = ''
+        this.numero = ''
+    }
+  
+
     //metodo
     depositoEnCuenta(valor){
         //el this se usa para referirnos a esta cuenta, en la que se este actualmente
@@ -23,8 +31,7 @@ class CuentaCorriente{
 }
 
 cuentaDeRaul = new CuentaCorriente()
-//el programa no sabe que tipo de dato es, debemos asignarle uno
-cuentaDeRaul.saldo = 0
+
 
 cuentaDeRaul.depositoEnCuenta(100)
 console.log(cuentaDeRaul);
