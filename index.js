@@ -23,30 +23,36 @@ class CuentaCorriente{
     //metodo
     depositoEnCuenta(valor){
         //el this se usa para referirnos a esta cuenta, en la que se este actualmente
-        if (valor > 0) {
-           this.#saldo += valor 
-        } 
+        if (valor > 0) 
+           this.#saldo += valor
+        return this.#saldo
     }
 
     retirarDeCuenta(valor){
-        if (valor <= this.#saldo) {
+        if (valor <= this.#saldo) 
             this.#saldo -= valor
-        }
+        return this.#saldo
+    }
+
+    verSaldo(){
+        return this.#saldo
     }
 }
 
 cuentaDeRaul = new CuentaCorriente()
 
+//para ver saldo debo crear una variable que va a variar a medida de la ejecucion del programa
+let saldo = cuentaDeRaul.verSaldo()
+
 
 cuentaDeRaul.depositoEnCuenta(100)
-console.log(cuentaDeRaul);
-cuentaDeRaul.retirarDeCuenta(1000)
-console.log(cuentaDeRaul);
-cuentaDeRaul.depositoEnCuenta(-20)
-console.log(cuentaDeRaul);
+
+cuentaDeRaul.retirarDeCuenta(30)
+
+cuentaDeRaul.depositoEnCuenta(220)
+saldo = cuentaDeRaul.verSaldo()
+console.log(`El saldo actual es ${saldo}`);
 
 /*
-CuentaCorriente { numero: '', agencia: '' }
-CuentaCorriente { numero: '', agencia: '' }
-CuentaCorriente { numero: '', agencia: '' }
+El saldo actual es 290
 */
