@@ -29,3 +29,22 @@ class Animal {
 }
 
 Esto puede ser aplicado a mas de un animal por eso es funcional y se deja en clase y objetos.
+
+Métodos
+- Puede recibir cualquier cantidad de parámetros, puede estar definido sin parámetros, como puede tener uno o mas.
+Esa es la forma de pasarle informacion para que podamos reutilizar su funcionalidad en diferentes escenarios.
+- Se usan para identificar los comportamientos que tiene nuestra clase.
+- El objetivo de los metodos es definir que acciones puede ejecutar un objeto.
+El comportamiento es implementado dentro del metodo
+
+dentro de clase 
+    //metodo
+    depositoEnCuenta(valor){
+        //el this se usa para referirnos a esta cuenta, en la que se este actualmente
+        this.saldo += valor
+    }
+
+    fuera de clase
+    cuentaDeRaul.retirarDeCuenta(50)
+    console.log(cuentaDeRaul);
+    RTA: CuentaCorriente { numero: 0, saldo: 50, agencia: '' }
