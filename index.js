@@ -26,9 +26,26 @@ cuentaDeRaul.retirarDeCuenta(30)
 
 cuentaDeRaul.depositoEnCuenta(220)
 saldo = cuentaDeRaul.verSaldo()
-console.log(`El saldo actual es ${saldo}`);
+console.log(`El saldo actual es de cuenta Raul es ${saldo}`);
 
-/*Relación de clases
+const cliente2 = new Cliente()
+cliente.nombreCliente = 'Maria'
+cliente.dniCliente = '233548121'
+cliente.rutCliente = '33355548'
+
+const cuentaDeMaria = new CuentaCorriente()
+cuentaDeMaria.numero = '2'
+cuentaDeMaria.agencia = '002'
+cuentaDeMaria.cliente = cliente
+
+cuentaDeRaul.transferirParaCuenta(100, cuentaDeMaria)
+
+const saldoMaria =cuentaDeMaria.verSaldo()
+console.log(`El saldo actual es de cuenta Maria es ${saldoMaria}`);
+
+const saldoRaul =cuentaDeRaul.verSaldo()
+console.log(`El saldo actual es de cuenta Raul es ${saldoRaul}`);
+/*Nueva cuenta con transferencia
 CuentaCorriente {
   cliente: Cliente {
     nombreCliente: 'Raul',
@@ -38,5 +55,7 @@ CuentaCorriente {
   numero: '1',
   agencia: '001'
 }
-El saldo actual es 290
+El saldo actual es de cuenta Raul es 290
+El saldo actual es de cuenta Maria es 100
+El saldo actual es de cuenta Raul es 190
 */
