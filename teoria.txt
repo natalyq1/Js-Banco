@@ -65,3 +65,18 @@ Los atributos solamente se podrás definir como privados cuando declares la clas
 
 Debes tener en cuenta de que esta sintaxis todavía se encuentra en fase experimental, por lo que todavía no se recomienda su uso.
 https://www.neoguias.com/atributos-privados-clases-javascript/
+
+
+MODULOS==> 
+Se crean archivos para cada una de las clases
+Se importan las clases en el index.js
+Se exportan las clases desde los archivos q las contienen
+en consola:
+    npm init
+        esto para inicializar y crear el archivo.json
+        me pide algunos datos y al final yes
+        me aparecera en archivos un .json
+            "type": "module",
+
+
+

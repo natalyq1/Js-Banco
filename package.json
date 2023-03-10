@@ -1,0 +1,20 @@
+{
+  "name": "cuentasbanco",
+  "version": "1.0.0",
+  "description": "Gestión de Cuentas Corrientes del Banco",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/natalyq1/Js-Banco.git"
+  },
+  "author": "Curso Alura, JavaScript",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/natalyq1/Js-Banco/issues"
+  },
+  "homepage": "https://github.com/natalyq1/Js-Banco#readme"
+}
