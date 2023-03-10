@@ -1,5 +1,5 @@
 //definición de clases
-class Cliente{
+export class Cliente{
     nombreCliente;
     dniCliente;
     rutCliente;

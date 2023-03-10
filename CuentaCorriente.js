@@ -1,4 +1,6 @@
 export class CuentaCorriente{
+    //atriibutos
+    cliente;
     numero;
     #saldo;
     agencia;
@@ -6,9 +8,10 @@ export class CuentaCorriente{
     //el programa no sabe que tipo de dato es, debemos asignarle uno
     //constructor y en este caso atributo privado
     constructor(){
+        this.cliente = null
+        this.numero = ''
         this.#saldo = 0
         this.agencia = ''
-        this.numero = ''
     }
   
 
