@@ -1,16 +1,28 @@
 import { Cliente } from "./Cliente.js";
 
 export class CuentaCorriente{
-    //atriibutos
-    cliente;
+    //atributos
+    #cliente;
     numero;
     #saldo;
     agencia;
 
+    //asignar
+    set setCliente(valor){
+        if (valor instanceof Cliente) {//si el valor recibido es una instancia de la clase cliente, de esta forma protejo el atributo cliente privado
+          this.#cliente = valor  
+        }
+    }
+
+    //obtener
+    get getCliente(){
+        return this.#cliente
+    }
+
     //el programa no sabe que tipo de dato es, debemos asignarle uno
     //constructor y en este caso atributo privado
     constructor(){
-        this.cliente = null//quiere decir q no existe pero esta explicito q va a existir
+        this.#cliente = null//quiere decir q no existe pero esta explicito q va a existir
         this.numero = ''
         this.#saldo = 0
         this.agencia = ''

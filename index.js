@@ -14,7 +14,7 @@ cuentaDeRaul.numero = '1'
 cuentaDeRaul.agencia = '001'
 cuentaDeRaul.cliente = cliente
 
-console.log(cuentaDeRaul);
+console.log(cuentaDeRaul.cliente);
 
 //para ver saldo debo crear una variable que va a variar a medida de la ejecucion del programa
 let saldo = cuentaDeRaul.verSaldo()
@@ -38,13 +38,21 @@ cuentaDeMaria.numero = '2'
 cuentaDeMaria.agencia = '002'
 cuentaDeMaria.cliente = cliente2
 
-if (cuentaDeMaria.cliente) {
+//if (cuentaDeMaria.cliente) {
     console.log(cuentaDeMaria.cliente);
-}else
-    console.log(cuentaDeMaria);
+//}else
+    //console.log(cuentaDeMaria);
 
-let parametroValor = 100
+//let parametroValor = 100
 
+cuentaDeMaria.cliente = 0//en este caso si yo quisiera dañar la integridad del cliente no es posible por instanceof en CuentaCorriente.js
+console.log(cuentaDeMaria.cliente);
+/*
+Cliente {
+  nombreCliente: 'Maria',
+  dniCliente: '233548121',
+  rutCliente: '33355548'
+}*/
 
 /*cuentaDeRaul.transferirParaCuenta(parametroValor, cuentaDeMaria)
 console.log('Cuenta de Maria:', cuentaDeMaria);
