@@ -13,6 +13,7 @@ const cuentaDeMaria = new CuentaCorriente(cliente2, '2', '002' )
 console.log(cliente);
 console.log(cliente2);
 
+console.log(CuentaCorriente.cantidadCuentas); //2
 //para ver saldo debo crear una variable que va a variar a medida de la ejecucion del programa
 let saldo = cuentaDeRaul.verSaldo()
 
@@ -25,9 +26,9 @@ cuentaDeRaul.depositoEnCuenta(220)
 saldo = cuentaDeRaul.verSaldo()
 console.log(`El saldo actual de la cuenta de Raul es ${saldo}`);
 
-
-
-
+cuentaDeRaul.transferirParaCuenta(50,cuentaDeMaria);
+saldo = cuentaDeRaul.verSaldo()
+console.log(`El saldo actual de la cuenta de Raul es ${saldo} despues de haber transferido a Maria`);
 /*
 Cliente {
   nombreCliente: 'Raul',

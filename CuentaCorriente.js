@@ -6,6 +6,7 @@ export class CuentaCorriente{
     numero;
     #saldo;
     agencia;
+    static cantidadCuentas = 0 //este atributo es comun para todas las cuentas
 
     //asignar
     set cliente(valor){
@@ -23,9 +24,10 @@ export class CuentaCorriente{
     //constructor y en este caso atributo privado
     constructor(cliente, numero, agencia){
         this.cliente = cliente//quiere decir q no existe pero esta explicito q va a existir
-        this.numero = ''
+        this.numero = numero
         this.#saldo = 0
-        this.agencia = ''
+        this.agencia = agencia
+        CuentaCorriente.cantidadCuentas++
     }
   
 

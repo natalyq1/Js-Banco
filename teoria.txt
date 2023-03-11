@@ -85,3 +85,5 @@ Es una buena parctica usar get para garantizar que la asignacion de valores a lo
 
 CONSTRUCTOR
 Ellos inicializan los atributos.
+
+ATRIBUTO ESTATICO- En este caso se uso para declarar para que sea de la clase en general
