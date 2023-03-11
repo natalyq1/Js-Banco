@@ -4,10 +4,10 @@ import { Cliente } from "./Cliente.js"
 import { CuentaCorriente } from "./CuentaCorriente.js";
 
 //esta debe definirse como una variable para funcionar por modulos
-const cliente = new Cliente()
-cliente.nombreCliente = 'Raul'
-cliente.dniCliente = '133548121'
-cliente.rutCliente = '1255548'
+const cliente = new Cliente('Raul', '133548121', '1255548')//ahora el cliente espera ciertos parametros luego de haber definido el constructor 
+const cliente2 = new Cliente('Maria', '233548121', '33355548')
+console.log(cliente);
+console.log(cliente2);
 
 const cuentaDeRaul = new CuentaCorriente()
 cuentaDeRaul.numero = '1'
@@ -28,15 +28,26 @@ cuentaDeRaul.depositoEnCuenta(220)
 saldo = cuentaDeRaul.verSaldo()
 console.log(`El saldo actual de la cuenta de Raul es ${saldo}`);
 
-const cliente2 = new Cliente()
-cliente2.nombreCliente = 'Maria'
-cliente2.dniCliente = '233548121'
-cliente2.rutCliente = '33355548'
+
+
 
 const cuentaDeMaria = new CuentaCorriente()
 cuentaDeMaria.numero = '2'
 cuentaDeMaria.agencia = '002'
 cuentaDeMaria.cliente = cliente2
+/*
+Cliente {
+  nombreCliente: 'Raul',
+  dniCliente: '133548121',
+  rutCliente: '1255548'
+}
+Cliente {
+  nombreCliente: 'Maria',
+  dniCliente: '233548121',
+  rutCliente: '33355548'
+}*/ 
+
+
 
 //if (cuentaDeMaria.cliente) {
     console.log(cuentaDeMaria.cliente);
@@ -45,37 +56,6 @@ cuentaDeMaria.cliente = cliente2
 
 //let parametroValor = 100
 
-cuentaDeMaria.cliente = 0//en este caso si yo quisiera dañar la integridad del cliente no es posible por instanceof en CuentaCorriente.js
+cuentaDeMaria.cliente = 0
+//en este caso si yo quisiera dañar la integridad del cliente no es posible por instanceof en CuentaCorriente.js
 console.log(cuentaDeMaria.cliente);
-/*
-Cliente {
-  nombreCliente: 'Maria',
-  dniCliente: '233548121',
-  rutCliente: '33355548'
-}*/
-
-/*cuentaDeRaul.transferirParaCuenta(parametroValor, cuentaDeMaria)
-console.log('Cuenta de Maria:', cuentaDeMaria);
-const saldoMaria =cuentaDeMaria.verSaldo()
-console.log(`El saldo actual de la cuenta de ${saldoMaria}`);
-
-const saldoRaul =cuentaDeRaul.verSaldo()
-console.log(`El saldo actual de la cuenta de ${saldoRaul}`);
-*/
-/*Nueva cuenta con transferencia
-CuentaCorriente {
-  cliente: Cliente {
-    nombreCliente: 'Raul',
-    dniCliente: '133548121',
-    rutCliente: '1255548'
-  },
-  numero: '1',
-  agencia: '001'
-}
-El saldo actual es de cuenta Raul es 290
-Cliente {
-  nombreCliente: 'Maria',
-  dniCliente: '233548121',
-  rutCliente: '33355548'
-}
-*/
