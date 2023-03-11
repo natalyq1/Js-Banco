@@ -26,25 +26,34 @@ cuentaDeRaul.retirarDeCuenta(30)
 
 cuentaDeRaul.depositoEnCuenta(220)
 saldo = cuentaDeRaul.verSaldo()
-console.log(`El saldo actual es de cuenta Raul es ${saldo}`);
+console.log(`El saldo actual de la cuenta de Raul es ${saldo}`);
 
 const cliente2 = new Cliente()
-cliente.nombreCliente = 'Maria'
-cliente.dniCliente = '233548121'
-cliente.rutCliente = '33355548'
+cliente2.nombreCliente = 'Maria'
+cliente2.dniCliente = '233548121'
+cliente2.rutCliente = '33355548'
 
 const cuentaDeMaria = new CuentaCorriente()
 cuentaDeMaria.numero = '2'
 cuentaDeMaria.agencia = '002'
-cuentaDeMaria.cliente = cliente
+cuentaDeMaria.cliente = cliente2
 
-cuentaDeRaul.transferirParaCuenta(100, cuentaDeMaria)
+if (cuentaDeMaria.cliente) {
+    console.log(cuentaDeMaria.cliente);
+}else
+    console.log(cuentaDeMaria);
 
+let parametroValor = 100
+
+
+/*cuentaDeRaul.transferirParaCuenta(parametroValor, cuentaDeMaria)
+console.log('Cuenta de Maria:', cuentaDeMaria);
 const saldoMaria =cuentaDeMaria.verSaldo()
-console.log(`El saldo actual es de cuenta Maria es ${saldoMaria}`);
+console.log(`El saldo actual de la cuenta de ${saldoMaria}`);
 
 const saldoRaul =cuentaDeRaul.verSaldo()
-console.log(`El saldo actual es de cuenta Raul es ${saldoRaul}`);
+console.log(`El saldo actual de la cuenta de ${saldoRaul}`);
+*/
 /*Nueva cuenta con transferencia
 CuentaCorriente {
   cliente: Cliente {
@@ -56,6 +65,9 @@ CuentaCorriente {
   agencia: '001'
 }
 El saldo actual es de cuenta Raul es 290
-El saldo actual es de cuenta Maria es 100
-El saldo actual es de cuenta Raul es 190
+Cliente {
+  nombreCliente: 'Maria',
+  dniCliente: '233548121',
+  rutCliente: '33355548'
+}
 */

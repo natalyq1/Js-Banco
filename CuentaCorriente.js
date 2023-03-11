@@ -1,3 +1,5 @@
+import { Cliente } from "./Cliente.js";
+
 export class CuentaCorriente{
     //atriibutos
     cliente;
@@ -8,7 +10,7 @@ export class CuentaCorriente{
     //el programa no sabe que tipo de dato es, debemos asignarle uno
     //constructor y en este caso atributo privado
     constructor(){
-        this.cliente = null
+        this.cliente = null//quiere decir q no existe pero esta explicito q va a existir
         this.numero = ''
         this.#saldo = 0
         this.agencia = ''
