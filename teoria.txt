@@ -95,3 +95,10 @@ Sirve para dar un detalle a cada cuenta en este caso y poder diferenciar cual es
 Herencia
 Extender la clase cuenta.
 Quiere decir que de la clase (de un punto padre a un punto hijo ) se transfieran propiedades o la funcionalidad. En este caso cuenta corriente y ahorro se extiende de cuenta asi q ofrece las funcionalidades pero tambien desde corriente y ahorro se dan otras funcionalidades.
+Se usa la palabra SUPER para traer las funcionalidades del padre.
+
+Clase ABstracta
+if (this.constructor == Cuenta) {
+            throw new Error('No se puede instanciar un objeto de la clase cuenta')
+        }
+    Esto evita que la clase Cuenta sea accedida directamente, esto la protege y evita asi que se generen errores.
