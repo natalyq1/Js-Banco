@@ -10,8 +10,9 @@ export class CuentaCorriente extends Cuenta{
         super(cliente, numero, agencia, 0);
         CuentaCorriente.cantidadCuentas++
     }
-  
-    prueba(){//sobreescribio el hijo
-        console.log('metodo hijo');
+    
+    retirarDeCuenta(valor){
+        valor = valor*1.05
+        super.retirarDeCuenta(valor)
     }
 }

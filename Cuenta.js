@@ -30,8 +30,6 @@ export class Cuenta {
     }
 
     retirarDeCuenta(valor){
-        
-        
         if (valor <= this.#saldo) 
             this.#saldo -= valor
         return this.#saldo
@@ -46,8 +44,5 @@ export class Cuenta {
         cuentaDestino.depositoEnCuenta(valor)
     }
 
-    prueba(){
-        console.log('prueba de padre');
-    }
 }
 
