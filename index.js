@@ -10,13 +10,13 @@ import { Cuenta } from "./Cuenta.js"
 const cliente = new Cliente('Raul', '133548121', '1255548')//ahora el cliente espera ciertos parametros luego de haber definido el constructor 
 const cliente2 = new Cliente('Maria', '233548121', '33355548')
 
-const cuentaDeRaul = new Cuenta(cliente, '1', '001', 0 )
-const cuentaDeMaria = new Cuenta(cliente2, '2', '002', 0 )
+const cuentaDeRaul = new Cuenta('Corriente', cliente, '1', '001', 0 )
+const cuentaDeMaria = new Cuenta('Corriente', cliente2, '2', '002', 0 )
 
 console.log(cliente);
 console.log(cliente2);
 
-const cuentaAhorroRaul = new Cuenta(cliente, '9985','001', 0)
+const cuentaAhorroRaul = new Cuenta('Ahorro', cliente, '9985','001', 0)
 console.log(cuentaDeRaul);
 cuentaDeRaul.depositoEnCuenta(150)
 console.log(cuentaDeRaul.verSaldo());
