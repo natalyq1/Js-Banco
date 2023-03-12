@@ -29,10 +29,10 @@ console.log(cuentaAhorroRaul.verSaldo());
 cuentaAhorroRaul.retirarDeCuenta(30)
 console.log(cuentaAhorroRaul.verSaldo());
  /* 
-Cuenta { numero: '1', agencia: '001' }
+Cuenta { tipo: 'Corriente', numero: '1', agencia: '001' } 
 150
+118.5
+Cuenta { tipo: 'Ahorro', numero: '9985', agencia: '001' } 
 120
-Cuenta { numero: '9985', agencia: '001' }       
-120
-90
+89.4
  */
