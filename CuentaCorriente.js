@@ -11,4 +11,7 @@ export class CuentaCorriente extends Cuenta{
         CuentaCorriente.cantidadCuentas++
     }
   
+    prueba(){//sobreescribio el hijo
+        console.log('metodo hijo');
+    }
 }

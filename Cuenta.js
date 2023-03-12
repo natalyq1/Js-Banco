@@ -45,5 +45,9 @@ export class Cuenta {
         this.retirarDeCuenta(valor)
         cuentaDestino.depositoEnCuenta(valor)
     }
+
+    prueba(){
+        console.log('prueba de padre');
+    }
 }
 
