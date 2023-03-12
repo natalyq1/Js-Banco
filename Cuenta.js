@@ -3,12 +3,22 @@ export class Cuenta {
     #cliente
     #saldo
 
-    constructor(tipo, cliente, numero, agencia, saldo){
-        this.tipo =tipo
+    constructor(cliente, numero, agencia, saldo){
+        
         this.numero = numero
         this.agencia = agencia
         this.#cliente = cliente
         this.#saldo = saldo
+    }
+
+    set cliente(valor){
+        if (valor instanceof Cliente) {
+          this.#cliente = valor  
+        }
+    }
+
+    get cliente(){
+        return this.#cliente
     }
 
     //metodo
@@ -20,13 +30,7 @@ export class Cuenta {
     }
 
     retirarDeCuenta(valor){
-        //especializacion de clase
-        if (this.tipo == 'Corriente') {
-           valor = valor*1.05 //una comision cada q alguien retira de la cuenta corriente 
-        }
-        else if (this.tipo == 'Ahorro') {
-            valor = valor*1.02 
-        }
+        
         
         if (valor <= this.#saldo) 
             this.#saldo -= valor

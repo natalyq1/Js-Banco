@@ -87,3 +87,11 @@ CONSTRUCTOR
 Ellos inicializan los atributos.
 
 ATRIBUTO ESTATICO- En este caso se uso para declarar para que sea de la clase en general
+
+
+Especializacion de clase
+Sirve para dar un detalle a cada cuenta en este caso y poder diferenciar cual es corriente y cual es de Ahorro
+
+Herencia
+Extender la clase cuenta.
+Quiere decir que de la clase (de un punto padre a un punto hijo ) se transfieran propiedades o la funcionalidad. En este caso cuenta corriente y ahorro se extiende de cuenta asi q ofrece las funcionalidades pero tambien desde corriente y ahorro se dan otras funcionalidades.
