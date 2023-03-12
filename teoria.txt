@@ -102,3 +102,5 @@ if (this.constructor == Cuenta) {
             throw new Error('No se puede instanciar un objeto de la clase cuenta')
         }
     Esto evita que la clase Cuenta sea accedida directamente, esto la protege y evita asi que se generen errores.
+
+Metodo Abstracto, es decir esta el esqueleto ero no hace nada, asi se protege.

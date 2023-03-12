@@ -32,7 +32,8 @@ export class Cuenta {
     }
 
     retirarDeCuenta(valor){
-        _retirarDeCuenta(valor, 0)
+        //se conviritio en metodo abstracto
+        throw new Error('Debe implementar el metodo retirar de cuenta en su clase')
     }
 
     _retirarDeCuenta(valor, comision){

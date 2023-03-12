@@ -4,6 +4,7 @@ import { Cliente } from "./Cliente.js"
 import { CuentaCorriente } from "./CuentaCorriente.js";
 import { CuentaAhorro } from "./CuentaAhorro.js"
 import { Cuenta } from "./Cuenta.js"
+import { CuentaNomina } from "./CuentaNomina.js";
 
 
 //esta debe definirse como una variable para funcionar por modulos
@@ -15,7 +16,7 @@ const cuentaDeMaria = new CuentaCorriente('Corriente', cliente2, '2', '002')
 
 console.log(cliente);
 console.log(cliente2);
- /* 
+ 
 const cuentaAhorroRaul = new CuentaAhorro(cliente, '9985','001', 0)
 console.log(cuentaDeRaul);
 cuentaDeRaul.depositoEnCuenta(150)
@@ -29,6 +30,13 @@ console.log(cuentaAhorroRaul.verSaldo());
 cuentaAhorroRaul.retirarDeCuenta(30)
 console.log(cuentaAhorroRaul.verSaldo());
 
+const cuentaNominaRaul = new CuentaNomina(cliente, '9854', '001', 100)
+cuentaNominaRaul.depositoEnCuenta(150)
+console.log(cuentaNominaRaul.verSaldo());
+cuentaNominaRaul.retirarDeCuenta(50)
+console.log(cuentaNominaRaul.verSaldo());
+//CuentaNomina { numero: '9854', agencia: '001' }
+/* 
 Cliente {
   nombreCliente: 'Raul',
   dniCliente: '133548121',
@@ -48,5 +56,4 @@ CuentaAhorro { numero: '9985', agencia: '001' }
 89.4
  */
 
-const cuentaSimple = new Cuenta(cliente, '098', '001', 100)
-console.log(cuentaSimple);
+
