@@ -17,7 +17,7 @@ export class Cliente{
         this.#clave = clave
     }
 
-    get clave(){
-        return this.#clave
+    autenticable(clave){
+        return true
     }
 }
